@@ -60,7 +60,7 @@ function updateHash(block, chain) {
 
 function updateChain(block, chain) {
   // update all blocks walking the chain from this block to the end
-  for (var x = block; x <= 5; x++) {
+  for (var x = block; x <= 6; x++) {
     if (x > 1) {
       $('#block'+x+'chain'+chain+'previous').val($('#block'+(x-1).toString()+'chain'+chain+'hash').val());
     }

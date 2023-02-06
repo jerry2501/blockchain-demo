@@ -3,7 +3,7 @@ extends layout
 block content
   .container-fluid
     h1 #{__('Tokens')}
-    - var peers = {1: 'A', 2: 'B', 3: 'C'}
+    - var peers = {1: 'A', 2: 'B', 3: 'C', 4: 'D'}
       each peer, chain in peers
         h3 #{__('Peer')} #{peer}
         .row.row-horizon
@@ -13,6 +13,7 @@ block content
           - blocks.push({block: 3, chain: chain, nonce: 13804, txs: [{value: '10.00', from: 'Emily', to: 'Jackson'},{value: '5.00', from: 'Madison', to: 'Jackson'},{value: '20.00', from: 'Lucas', to: 'Grace'}], previous: '000078be183417844c14a9251ca246fb15df1074019873f5d85c1a6f4311d4e0'})
           - blocks.push({block: 4, chain: chain, nonce: 20688, txs: [{value: '62.19', from: 'Rick', to: 'Ilsa'},{value: '867.96', from: 'Captain Louis Renault', to: 'Strasser'},{value: '276.15', from: 'Victor Laszlo', to: 'Ilsa'},{value: '97.13', from: 'Rick', to: 'Sam'},{value: '119.63', from: 'Captain Louis Renault', to: 'Jan Brandel'}], previous: '0000c2c95f54a49b4f2bee7056a7dc3b7c1a408706c848b520e20eac75aaceb0'})
           - blocks.push({block: 5, chain: chain, nonce: 33083, txs: [{value: '14.12', from: 'Denise Lovett', to: 'Edmund Lovett'},{value: '2,760.29', from: 'Lord Glendenning', to: 'John Moray'},{value: '413.78', from: 'Katherine Glendenning', to: 'Miss Audrey'}], previous: '0000c03019ed59586405750968888fb65256e82492480d9fe0a6bd2f5e86b5ca'})
+          - blocks.push({block: 6, chain: chain, nonce: 151462, txs: [{value: '65', from: 'Ilsa', to: 'Rick'},{value: '888.96', from: 'Captain Louis Renault', to: 'Ilsa'},{value: '295.15', from: 'Rick', to: 'Ilsa'},{value: '113.13', from: 'Rick', to: 'Sam'},{value: '150.63', from: 'Captain Louis Renault', to: 'Jan Brandel'}], previous: '0000baa0cce9eb9432ce5b3081624be9fe47700fbe75bfd3bd276a03cc0dbe3a'})
           each block in blocks
             .col-xs-7
               include includes/tokenblock
@@ -24,18 +25,28 @@ block content
       setup(3, 1);
       setup(4, 1);
       setup(5, 1);
+      setup(6, 1);
 
       setup(1, 2);
       setup(2, 2);
       setup(3, 2);
       setup(4, 2);
       setup(5, 2);
+      setup(6, 2);
 
       setup(1, 3);
       setup(2, 3);
       setup(3, 3);
       setup(4, 3);
       setup(5, 3);
+      setup(6, 3);
+
+      setup(1, 4);
+      setup(2, 4);
+      setup(3, 4);
+      setup(4, 4);
+      setup(5, 4);
+      setup(6, 4);
     });
 
     function getText(block, chain) {
